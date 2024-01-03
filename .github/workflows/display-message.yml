@@ -22,7 +22,7 @@ jobs:
             node-version: '14'
 
         - name: Install Dependencies
-          run: npm install      
+          run: npm install @actions/github   
 
         - name: Welcome User
           run: node message.js
