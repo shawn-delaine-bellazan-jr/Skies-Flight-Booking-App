@@ -16,6 +16,13 @@ jobs:
         - name: Checkout Repository
           uses: actions/checkout@v3
 
-        - name: Display Application Name
-          run: |
-            echo "Twinsure"  # Replace with your branding or logo message
+        - name: Set up Node.js
+          uses: actions/setup-node@v3
+          with:
+            node-version: '14'
+
+        - name: Install Dependencies
+          run: npm install      
+
+        - name: Welcome User
+          run: node message.js
