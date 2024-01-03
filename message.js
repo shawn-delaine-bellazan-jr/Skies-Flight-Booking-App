@@ -1,7 +1,7 @@
 const github = require('@actions/github');
+const TOKEN = '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'
 
-const token = process.env.GITHUB_TOKEN;
-const octokit = github.getOctokit(token);
+const octokit = github.getOctokit(TOKEN);
 
 async function welcomeUser() {
   const { owner, repo, number } = github.context.issue;

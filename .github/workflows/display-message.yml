@@ -12,6 +12,10 @@ jobs:
     display_message:
         runs-on: ubuntu-latest
 
+        permissions:
+          contents: read
+          pull-requests: write
+
         steps:
         - name: Checkout Repository
           uses: actions/checkout@v4
@@ -26,4 +30,5 @@ jobs:
 
         - name: Welcome User
           run: node message.js
+          
           
