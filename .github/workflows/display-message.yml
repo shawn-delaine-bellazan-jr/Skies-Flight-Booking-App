@@ -1,0 +1,21 @@
+name: Display Application Name on Synchronized Push
+
+on:
+    push: 
+        branches:
+            - test
+    pull_request:
+        types:
+            - synchronize
+
+jobs:
+    display_message:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v3
+
+        - name: Display Application Name
+          run: |
+            echo "Twinsure"  # Replace with your branding or logo message
