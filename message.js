@@ -7,7 +7,7 @@ async function welcomeUser() {
   const { owner, repo, number } = github.context.issue;
   const username = github.context.payload.pull_request.user.login;
 
-  const welcomeMessage = `👋 Welcome, @${username}! Thanks for opening this pull request. We appreciate your contribution! 🚀`;
+  const welcomeMessage = `👋 Welcome, @${username}! 🚀`;
 
   await octokit.issues.createComment({
     owner,
